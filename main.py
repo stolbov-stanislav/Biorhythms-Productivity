@@ -11,11 +11,13 @@
 
 from tkinter_mainloop import *
 
-try:
-	create_db()
-except sqlite3.Error:
-	pass
-finally:
-	tkinter_mainloop()
+if __name__ == "__main__":
+	
+	try:
+		create_db()
+	except sqlite3.Error:
+		pass
+	finally:
+		tkinter_mainloop()
 
 
